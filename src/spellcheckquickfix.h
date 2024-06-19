@@ -20,7 +20,11 @@
 
 #pragma once
 
-#include <cppeditor/quickfixes/cppquickfix.h>
+#if __has_include(<cppeditor/quickfixes/cppquickfix.h>)
+#	include <cppeditor/quickfixes/cppquickfix.h>
+#else
+#	include <cppeditor/cppquickfixes.h>
+#endif
 
 namespace SpellChecker {
 
