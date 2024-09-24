@@ -817,10 +817,8 @@ void SpellCheckerCore::updateContextMenu()
   if( d->contextMenuHolderCommands.isEmpty() == true ) {
     /* Populate the internal vector with the holder actions to speed up the process
      * of updating the context menu when requested again. */
-    QVector<Utils::Id> holderActionIds { Constants::ACTION_HOLDER1_ID, Constants::ACTION_HOLDER2_ID, Constants::ACTION_HOLDER3_ID, Constants::ACTION_HOLDER4_ID, Constants::ACTION_HOLDER5_ID };
-    /* Iterate the commands and */
-    for( int count = 0; count < holderActionIds.size(); ++count ) {
-      Core::Command* cmd = Core::ActionManager::command( holderActionIds[count] );
+    for ( int count = 1; count < 6; ++count ) {
+      Core::Command *cmd = Core::ActionManager::command( Constants::ACTION_HOLDER_BASE_ID.withSuffix( count ) );
       d->contextMenuHolderCommands.push_back( cmd );
     }
   }

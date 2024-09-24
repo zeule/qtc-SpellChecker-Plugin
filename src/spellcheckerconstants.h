@@ -35,12 +35,7 @@ const Utils::Id ACTION_SUGGEST_ID { "SpellChecker.ActionSuggest"};
 const Utils::Id ACTION_IGNORE_ID  { "SpellChecker.ActionIgnore"};
 const Utils::Id ACTION_ADD_ID     { "SpellChecker.ActionAdd"};
 const Utils::Id ACTION_LUCKY_ID   { "SpellChecker.ActionLucky"};
-const Utils::Id ACTION_HOLDER1_ID { "SpellChecker.ActionHolder1"};
-const Utils::Id ACTION_HOLDER2_ID { "SpellChecker.ActionHolder2"};
-const Utils::Id ACTION_HOLDER3_ID { "SpellChecker.ActionHolder3"};
-const Utils::Id ACTION_HOLDER4_ID { "SpellChecker.ActionHolder4"};
-const Utils::Id ACTION_HOLDER5_ID { "SpellChecker.ActionHolder5"};
-
+const Utils::Id ACTION_HOLDER_BASE_ID{ "SpellChecker.ActionHolder" };
 const char CORE_SETTINGS_GROUP[]      = "SpellCheckerPlugin";
 const char CORE_SPELLCHECKERS_GROUP[] = "SpellCheckers";
 const char CORE_PARSERS_GROUP[]       = "Parsers";

@@ -162,10 +162,9 @@ Utils::Result<> SpellCheckerPlugin::initialize(const QStringList& arguments)
   contextMenu->addSeparator();
   /* Add 5 dummy actions that will be used for spelling mistakes that can be fixed from the
    * context menu */
-  QVector<Utils::Id> holderActionIds { Constants::ACTION_HOLDER1_ID, Constants::ACTION_HOLDER2_ID, Constants::ACTION_HOLDER3_ID, Constants::ACTION_HOLDER4_ID, Constants::ACTION_HOLDER5_ID };
-  for( int count = 0; count < holderActionIds.size(); ++count ) {
+  for ( int count = 1; count < 6; ++count ) {
     QAction* actionHolder    = new QAction( QStringLiteral( "" ), this );
-    Core::Command* cmdHolder = Core::ActionManager::registerAction( actionHolder, holderActionIds[count], textContext );
+    Core::Command *cmdHolder = Core::ActionManager::registerAction( actionHolder, Constants::ACTION_HOLDER_BASE_ID.withSuffix( count ), textContext );
     contextMenu->addAction( cmdHolder );
   }
   /* Set the right click context menu only enabled if the word under the cursor is a spelling
